@@ -6,7 +6,7 @@ import seaborn as sns
 import streamlit as st
 import plotly.express as px
 #load the dataset
-df = pd.read_csv("/Users/ahmadmalak/Desktop/ahmad/heart_2020_cleaned.csv")
+df = pd.read_csv("ahmad/heart_2020_cleaned.csv")
 print(df.head())
 # Rename columns to include spaces
 df = df.rename(columns={
