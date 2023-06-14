@@ -1,7 +1,7 @@
 
 #Import libraries
 import pandas as pd
-import matplotlib.pyplot as plt
+from plotly.subplots import make_subplots
 import seaborn as sns
 import streamlit as st
 import plotly.express as px
@@ -98,8 +98,9 @@ if variable != 'Heart Disease':
 # Generate correlation matrix
 correlation_matrix = df.corr()
 
-# Set up the figure and axes
-fig, ax = plt.subplots(figsize=(20, 15))
+# Create subplots
+fig = make_subplots(rows=2, cols=2, subplot_titles=("Plot 1", "Plot 2", "Plot 3", "Plot 4"))
+
 
 # Plot the correlation matrix heatmap
 sns.heatmap(correlation_matrix, annot=True, cbar=False, cmap='RdBu', ax=ax)
